@@ -1,0 +1,29 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="view.MasterList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page>
+	    <customHeader>
+	        <Bar xmlns="sap.m" id="id_Ibar">
+	            <contentLeft>
+					<Button icon="sap-icon://arrow-left" press="onBack"/>
+				</contentLeft>
+			    <contentMiddle>
+					<Text text="Items in your Fridge"/>
+				</contentMiddle>
+				<contentRight>
+					<Button id="id_SyncMaster" icon="sap-icon://synchronize" press="onRefresh"/>
+				</contentRight>	    
+			</Bar>
+	    </customHeader>
+		<content>
+			<List noDataText="Drop list items here" id="__list0" items="{/}">
+			    <items>
+					<ObjectListItem type="Active" title="{gsx$name/$t}" number="{gsx$qty/$t}" numberUnit="{gsx$unit/$t}" intro="{gsx$category/$t}" press="onListItem">
+						<firstStatus>
+							<ObjectStatus text="{path:'gsx$daysold/$t', formatter:'.daysOld'}"/>
+						</firstStatus>
+					</ObjectListItem>
+				</items>
+			</List>			
+		</content>
+	</Page>
+	</core:View>

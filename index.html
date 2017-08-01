@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+		<script type="text/javascript" src="resources/sap/ui/thirdparty/jquery/jquery-1.7.1.js"></script>
+     	<script type="text/javascript" src="resources/sap/ui/thirdparty/jqueryui/jquery-ui-position.js"></script>
+
+		<script id="sap-ui-bootstrap"
+			src="https://openui5.hana.ondemand.com/1.46.4/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-compatVersion="edge">
+		</script>
+				
+		<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"> </script> -->
+		
+		<script>
+		
+		sap.ui.localResources("view");
+		var app = new sap.m.App({initialPage:"idview11"});
+		var page = sap.ui.view({id:"idview11", viewName:"view.Home", type:sap.ui.core.mvc.ViewType.XML});
+		var pageList = sap.ui.view({id:"idview22", viewName:"view.MasterList", type:sap.ui.core.mvc.ViewType.XML});
+		var pageCheckList = sap.ui.view({id:"idview33", viewName:"view.Checklist", type:sap.ui.core.mvc.ViewType.XML});
+		var pageMessage = sap.ui.view({id:"idview44", viewName:"view.Message", type:sap.ui.core.mvc.ViewType.XML});
+		app.addPage(page);
+		app.addPage(pageList);
+		app.addPage(pageCheckList);
+		app.addPage(pageMessage);
+		app.placeAt("content");
+		</script>		
+		
+		 
+		<script type="text/javascript" src="cordova.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	</head>
+
+	<body class="sapUiBody" role="application">
+	<div id="content"></div>
+	</body>
+
+</html>

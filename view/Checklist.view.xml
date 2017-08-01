@@ -1,0 +1,89 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="view.Checklist" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page>
+	     <customHeader>
+	        <Bar xmlns="sap.m" id="id_Ibar">
+	            <contentLeft>
+					<Button icon="sap-icon://arrow-left" press="onBack"/>
+				</contentLeft>
+			    <contentMiddle>
+					<Text text="Checklist"/>
+				</contentMiddle>
+				<contentRight>
+					<Button id="id_SyncCheckL" icon="sap-icon://synchronize" press="onRefresh"/>
+				</contentRight>	    
+			</Bar>
+	    </customHeader>
+		<content>
+		    <Panel headerText="Necessary Items">
+		        <CheckBox id="idChkAppleS" text="Apple" editable="false" selected="true" visible="false" valueState="Warning"/>
+		        <CheckBox id="idChkApple" text="Apple" editable="false" valueState="Error"/>
+		        <CheckBox id="idChkEggsS" text="Eggs" editable="false" selected="true" visible="false" valueState="Warning"/>
+		        <CheckBox id="idChkEggs" text="Eggs" editable="false" valueState="Error"/>
+		        <CheckBox id="idChkMilkS" text="Milk" editable="false" selected="true" visible="false" valueState="Warning"/>
+		        <CheckBox id="idChkMilk" text="Milk" editable="false" valueState="Error"/>
+		        <CheckBox id="idChkTomatoS" text="Tomato" editable="false" selected="true" visible="false" valueState="Warning"/>		        
+		        <CheckBox id="idChkTomato" text="Tomato" editable="false" valueState="Error"/>
+		        <CheckBox id="idChkChillyS" text="Chilly" editable="false" selected="true" visible="false" valueState="Warning"/>
+		        <CheckBox id="idChkChilly" text="Chilly" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkCurdS" text="Curd" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkCurd" text="Curd" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkLemonS" text="Lemon" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkLemon" text="Lemon" editable="false" valueState="Error"/>
+		  	</Panel>
+		  		    	
+		  	<Panel headerText="Action" layout="ResponsiveGridLayout">
+		  	    <Text id="idCheckText"/>
+		 	</Panel>
+		  	
+		    <Panel headerText="Important Items">
+		        <CheckBox id="idChkCauliS" text="Cauliflower" editable="false" selected="true" visible="false" valueState="Warning"/>
+		        <CheckBox id="idChkCauli" text="Cauliflower" editable="false" valueState="Error"/>
+		        <CheckBox id="idChkCabbS" text="Cabbage" editable="false" selected="true" visible="false" valueState="Warning"/>
+		        <CheckBox id="idChkCabb" text="Cabbage" editable="false" valueState="Error"/>
+		        <CheckBox id="idChkCucumS" text="Cucumber" editable="false" selected="true" visible="false" valueState="Warning"/>
+		        <CheckBox id="idChkCucum" text="Cucumber" editable="false" valueState="Error"/>
+		        <CheckBox id="idChkCapsiS" text="Capsicum" editable="false" selected="true" visible="false" valueState="Warning"/>		        
+		        <CheckBox id="idChkCapsi" text="Capsicum" editable="false" valueState="Error"/>
+		        <CheckBox id="idChkBrinjalS" text="Brinjal" editable="false" selected="true" visible="false" valueState="Warning"/>
+		        <CheckBox id="idChkBrinjal" text="Brinjal" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkOrangeS" text="Oranges" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkOrange" text="Oranges" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkSpinachS" text="Spinach" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkSpinach" text="Spinach" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkCokeS" text="Soft Drinks" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkCoke" text="Soft Drinks" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkBananaS" text="Banana" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkBanana" text="Banana" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkFfS" text="French Fries" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkFf" text="French Fries" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkFishS" text="Fish" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkFish" text="Fish" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkCheeseS" text="Cheese" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkCheese" text="Cheese" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkBgS" text="Bitter Gourd" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkBg" text="Bitter Gourd" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkSweetS" text="Sweets" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkSweet" text="Sweets" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkIceCrmS" text="Ice Cream" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkIceCrm" text="Ice Cream" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkChknS" text="Chicken" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkChkn" text="Chicken" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkCarrotS" text="Carrot" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkCarrot" text="Carrot" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkPmpknS" text="Pumpkin" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkPmpkn" text="Pumpkin" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkMangoS" text="Mango" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkMango" text="Mango" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkBeanS" text="Beans" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkBean" text="Beans" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkButterS" text="Butter" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkButter" text="Butter" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkGheeS" text="Ghee" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkGhee" text="Ghee" editable="false" valueState="Error"/>
+		       	<CheckBox id="idChkCreamS" text="Cream" editable="false" selected="true" visible="false" valueState="Warning"/>
+		       	<CheckBox id="idChkCream" text="Cream" editable="false" valueState="Error"/>
+		  	</Panel>
+		</content>
+	</Page>
+</core:View>

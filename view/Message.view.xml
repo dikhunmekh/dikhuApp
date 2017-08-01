@@ -1,0 +1,41 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="view.Message" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Messages">	    
+	    <customHeader>
+	        <Bar xmlns="sap.m" id="id_Ibar">
+	            <contentLeft>
+					<Button icon="sap-icon://arrow-left" press="onBack"/>
+				</contentLeft>
+			    <contentMiddle>
+					<Text text="Checklist"/>
+				</contentMiddle>
+				<contentRight>
+					<Button id="id_SyncMsg" icon="sap-icon://synchronize" press="onRefresh"/>
+				</contentRight>	    
+			</Bar>
+	    </customHeader>
+	    
+		<content>			
+		    <Panel>
+		 	    <headerToolbar>
+					<Toolbar>
+						<Title text="Messages"/>
+						<ToolbarSpacer/>
+						<Button text="New message" press="onNewMessage" type="Emphasized"/>
+					</Toolbar>
+				</headerToolbar>
+		 	    <List
+					showSeparators="Inner"
+					items="{/}" >
+					<FeedListItem
+						sender="{gsx$author/$t}"
+						icon="{path:'gsx$author/$t', formatter:'.authorIcon'}"
+						iconDensityAware="false"
+						info="Message"
+						timestamp="{path:'gsx$date/$t', formatter:'.daysOld'}"
+						text="{gsx$message/$t}"/>
+				</List>		  	    
+		 	</Panel>		 	
+		</content>
+	</Page>
+</core:View>

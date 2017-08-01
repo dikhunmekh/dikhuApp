@@ -1,0 +1,35 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+ controllerName="view.Home" xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="idPageHome" title="Fridge Management" showHeader="true">
+		<content>
+		    <TileContainer xmlns="sap.m">
+				<tiles>
+					<StandardTile class="clTileDesign" title="Available Items" info="in your Fridge" icon="images/items.png" infoState="Success" id="__tile9" press="onAvailable"/>
+					<StandardTile class="clTileDesign" title="Store New Item" info="into Fridge" icon="images/addItem.png" infoState="Success" id="__tile2" press="onAddItem"/>
+					<StandardTile class="clTileDesign" title="Checklist" info="Items tracker" icon="images/checklist.png" infoState="Success" id="__tile95" press="onChecklist"/>				
+					<StandardTile class="clTileDesign" title="Messages" info="Message Room" icon="images/messages.png" infoState="Success" id="__tile97" press="onMessages"/>				
+					<StandardTile class="clTileDesign" title="Rice" info="Cereal" icon="images/rice.png" infoState="Success" id="__tile71" press="onRice"/>
+					<StandardTile class="clTileDesign" title="Dal" info="Cereal" icon="images/dal.png" infoState="Success" id="__tile72" press="onDal"/>
+					<StandardTile class="clTileDesign" title="Bhaji" info="Curry" icon="images/bhaji.jpg" infoState="Success" id="__tile73" press="onBhaji"/>
+					<StandardTile class="clTileDesign" title="Sabji" info="Curry" icon="images/sabji.jpg" infoState="Success" id="__tile74" press="onSabji"/>
+					<StandardTile class="clTileDesign" title="Atta" info="Cereal" icon="images/atta.jpg" infoState="Success" id="__tile75" press="onAtta"/>
+					<StandardTile class="clTileDesign" title="Apple" info="Fruit" icon="images/apple.png" infoState="Success" id="__tile3" press="onApple"/>
+					<StandardTile class="clTileDesign" title="Milk" info="Dairy" icon="images/milk.png" infoState="Success" id="__tile5" press="onMilk"/>
+					<StandardTile class="clTileDesign" title="Tomato" info="Vegetable" icon="images/tomato.png" infoState="Success" id="__tile91" press="onTomato"/>
+					<StandardTile class="clTileDesign" title="Eggs" info="Dairy" icon="images/eggs.jpg" infoState="Success" id="__tile93" press="onEggs"/>
+					<StandardTile class="clTileDesign" title="Curd" info="Dairy" icon="images/curd.png" infoState="Success" id="__tile6" press="onCurd"/>
+					<StandardTile class="clTileDesign" title="Lemon" info="Vegetable" icon="images/lemon.png" infoState="Success" id="__tile8" press="onLemon"/>
+				</tiles>
+			</TileContainer>
+		</content>
+		<footer>
+			<Bar id="id_Ibar">
+			    <contentMiddle>
+				<Button id="id_ButtonYellow" icon="images/cautionGreen.png" class="clCautionButton" width="5em" press="cautionYellow" visible="false"/>
+				<Button id="id_ButtonRed" icon="images/cautionRed.png" class="clCautionButton" width="5em" press="cautionRed" visible="false"/>
+				<Button id="id_ButtonChecklist" icon="images/checklistNote.png" class="clCautionButton" width="5em" press="cautionCheck" visible="false"/>
+				</contentMiddle>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>
